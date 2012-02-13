@@ -1,5 +1,8 @@
 Sample program of golang websocket package
 
+$ go get code.google.com/p/go.net/websocket
+$ go run websocket_echo_sample.go
+
 Chrome 15.0.874.0: supports binary messaging
 Chrome 14.0.835.2: supports HyBi10
 Chrome 12.0.742.91: supports HyBi00

@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"http"
 	"io"
-	"websocket"
+	"net/http"
+	"code.google.com/p/go.net/websocket"
 )
 
 var port *int = flag.Int("p", 23456, "Port to listen.")
@@ -222,6 +222,6 @@ func main() {
 	fmt.Printf("http://localhost:%d/\n", *port)
 	err := http.ListenAndServe(fmt.Sprintf(":%d", *port), nil)
 	if err != nil {
-		panic("ListenANdServe: " + err.String())
+		panic("ListenANdServe: " + err.Error())
 	}
 }
